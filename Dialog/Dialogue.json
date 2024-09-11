@@ -1,0 +1,8 @@
+[
+	{"name": "Villager" , "text": "Hello there!"},
+	{"name":"You","text":"How can I do that ?"},
+	{"name":"Villager" , "text":"Welcome,traveler! Can you help me count the apple in my garden ?"},
+	{"name":"Villager" ,"text":"You can use a For loop Just go to each tree from the first to the last"}
+	
+	
+]

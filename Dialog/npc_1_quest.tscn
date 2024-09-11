@@ -1,0 +1,132 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1rfbrjj3vk2s"]
+
+[ext_resource type="Script" path="res://Dialog/npc_1_quest.gd" id="1_6k8yb"]
+[ext_resource type="Texture2D" uid="uid://bncjrfsq1fmqt" path="res://art/tilesets/inventory-slot.png" id="1_20mbt"]
+
+[node name="npc1_quest" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_6k8yb")
+
+[node name="quest1_ui" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = -90.0
+offset_top = -151.0
+offset_right = -44.0
+offset_bottom = -126.0
+scale = Vector2(4, 4)
+texture = ExtResource("1_20mbt")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Name" type="RichTextLabel" parent="quest1_ui"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 144.0
+offset_bottom = 23.0
+scale = Vector2(0.2, 0.2)
+text = "Villager
+
+"
+
+[node name="text" type="RichTextLabel" parent="quest1_ui"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 5.5
+offset_right = 217.0
+offset_bottom = 60.5
+scale = Vector2(0.2, 0.2)
+text = "please help me collect 3 stick
+"
+
+[node name="yesbutton1" type="Button" parent="quest1_ui"]
+modulate = Color(0.305882, 0.941176, 0.121569, 1)
+layout_mode = 0
+offset_left = 22.5
+offset_top = 15.75
+offset_right = 56.5
+offset_bottom = 46.75
+scale = Vector2(0.2, 0.2)
+text = "Yes"
+
+[node name="nobutton2" type="Button" parent="quest1_ui"]
+modulate = Color(0.952941, 0, 0.113725, 1)
+layout_mode = 0
+offset_left = 30.5
+offset_top = 15.75
+offset_right = 64.5
+offset_bottom = 46.75
+scale = Vector2(0.2, 0.2)
+text = "No"
+
+[node name="no_quest" type="NinePatchRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -90.0
+offset_top = -151.0
+offset_right = -44.0
+offset_bottom = -126.0
+scale = Vector2(4, 4)
+texture = ExtResource("1_20mbt")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Name" type="RichTextLabel" parent="no_quest"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 144.0
+offset_bottom = 23.0
+scale = Vector2(0.3, 0.3)
+text = "Villager"
+
+[node name="text" type="RichTextLabel" parent="no_quest"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 7.5
+offset_right = 145.0
+offset_bottom = 62.5
+scale = Vector2(0.3, 0.3)
+text = "No Quest currently"
+
+[node name="finished_quest" type="NinePatchRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -90.0
+offset_top = -147.0
+offset_right = -44.0
+offset_bottom = -122.0
+scale = Vector2(4, 4)
+texture = ExtResource("1_20mbt")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Name" type="RichTextLabel" parent="finished_quest"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 144.0
+offset_bottom = 23.0
+scale = Vector2(0.3, 0.3)
+text = "Villager"
+
+[node name="text" type="RichTextLabel" parent="finished_quest"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 7.5
+offset_right = 145.0
+offset_bottom = 62.5
+scale = Vector2(0.3, 0.3)
+text = "Thank you so much "
+
+[connection signal="pressed" from="quest1_ui/yesbutton1" to="." method="_on_yesbutton_1_pressed"]
+[connection signal="pressed" from="quest1_ui/nobutton2" to="." method="_on_nobutton_2_pressed"]
